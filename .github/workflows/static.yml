@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Dependencies
-        run: node server.js
+        run: node codespace-congenial-winner-59gj6vqg662v59w/server.js
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
