@@ -1,0 +1,658 @@
+* {
+  margin: 0;
+	padding: 0;
+	font-family: 'w95faregular';
+}
+html {
+   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  width: 100%;
+}
+.header{
+ min-height: 100vh;
+ width: 100%;	
+
+background-position:center ;
+	position: absolute;
+  background-color: #008080;
+	
+	
+}
+nav{
+	display: flex;
+	padding: 2% 6% ;
+	justify-content: space-between;
+  align-items: center;
+}
+
+nav img{
+	width: 300px;
+	
+}
+
+.navlinks{
+	flex: 1;
+	text-align: right;
+	
+}
+.navlinks ul li{
+	
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.navlinks ul li a{
+color: whitesmoke;
+	text-decoration: none;
+	font-size: 13px;
+
+	
+}
+.navlinks ul li::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #939aff;
+	display:block;
+	border: auto;
+	transition: 1s;
+}
+
+.navlinks ul li:hover::after{
+	width: 100%;
+
+}
+@media only screen and (min-width: 1026px) {
+.menupic { 
+	display: none;
+	
+}}
+	@media only screen and (max-width: 1026px) {
+	
+.navlinks ul li { 
+	display: none;
+	
+
+}}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #939aff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+	
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.menupic{
+	height:40px;
+	width:40px;
+
+}
+.closebtn{
+		height:67px;
+	width:67px;
+}
+footer{
+position: absolute;
+  bottom: 0;
+  width: 100%;
+	height:30px;
+  min-height: 25px;
+	background-color:#c3c3c3;
+	border-top: 2px solid white
+}
+
+.thinbar{
+	border: 2px inset;
+	top: 1px;
+	/* height:28px; */
+	min-height: 28px;
+	position: absolute;
+}
+.thinbar1{
+	border: 2px inset;
+	top: 1px;
+	    right: 88;
+	min-height: 28px;
+	position: absolute;
+}
+.thiccbar{
+	
+    border: 2px outset;
+    top: 5px;
+    /* height: 28px; */
+    min-height: 20px;
+    position: absolute;
+    /* vertical-align: middle; */
+
+}
+.thiccbar1{
+	      right: 95;
+    border: 2px outset;
+    top: 5px;
+    /* height: 28px; */
+    min-height: 20px;
+    position: absolute;
+    /* vertical-align: middle; */
+
+}
+.time{
+	    right: 2px;
+	width:78;
+    border: 2px inset white;
+   
+    top: 3px;
+    padding: 2px;
+    min-height: 20px;
+    position: absolute;
+
+
+}
+.dropdown-content {
+	overflow:hidden;
+	position: fixed;
+	font-size: 16px;
+  display: none;
+  background-color: #c0c0c0;
+  min-width: 200px;
+  bottom: 32px;
+  z-index: 1000;
+left: 5px;
+box-shadow: 1px 1px 1px ;
+}
+
+html, body {
+	 min-height: 100vh;
+  min-height: -webkit-fill-available;
+		font-family: 'w95faregular';
+  height: 100vh;
+  height: -webkit-fill-available;
+	width: -webkit-fill-available;
+	
+}
+@font-face {
+    font-family: 'w95faregular';
+    src: url('w95fa-webfont.woff2') format('woff2'),
+         url('w95fa-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.startmenu {
+	overflow:hidden;
+width:100%;
+	
+	border-right: 2px white solid; border-left: 1px black solid; border-top: 2px black solid; border-bottom: 1px white solid;
+	
+	}
+
+.winuptext{
+	border-width: 95%;
+	border-bottom: 1px solid #909090;
+	height: 50px;
+}
+.thenextthing{
+	cursor: pointer;
+	border-top: 1px solid white;
+	height:50px
+}
+.mail,.phoone,.wbinfo{
+	
+		cursor: pointer;
+	height:50px
+}
+.wbinfo{
+	
+    border-bottom: 1px solid #909090;
+
+}
+#win > table > tbody > tr:nth-child(6){
+    display: block;
+    border-top: 1px solid white;
+}
+::-webkit-scrollbar {
+width: 15px;	
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+	border: 1px inset;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3c1c4;
+	border:1px outset;
+}
+::-webkit-scrollbar-button{
+	 border:1px outset;
+
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+
+
+     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTcgNWgxTTYgNmgzTTUgN2g1TTQgOGg3IiAvPgo8L3N2Zz4=");
+
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTQgNWg3TTUgNmg1TTYgN2gzTTcgOGgxIiAvPgo8L3N2Zz4=");
+;
+
+	
+}
+
+#education {
+		display:block;
+	}
+	#skills,#acheiv,#langs,#hooman{
+		
+		display:none;
+	}
+	
+
+.img_start{
+	height:36px;
+}
+	
+	.outerdebody {
+
+		padding: 1px;
+		width: 100%;
+	}
+
+	.bordertop {
+		border-top: 2px solid white;
+		width: 426px;
+		position: absolute;
+		
+		right: 0;
+	}
+
+	.debody {
+		top: 0;
+		padding: 1px;
+		height: 0;
+		width: 100%;
+		border-left: 2px solid white;
+		border-radius: 5px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		position:absolute;
+		border-right: 2px solid white;
+		border-bottom: 2px solid white;
+		overflow-y: auto;
+	}
+
+	.nabh-bar {}
+
+	.nabh-bar ul {
+		list-style-type: none;
+
+		padding: 1px;
+		overflow: hidden;
+	}
+
+	.nabh-bar  {
+		  cursor: pointer;
+ overflow: auto;
+  white-space: nowrap;
+	}
+
+	.nabh-bar a {
+		display: inline-block;
+		z-index: 4;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border: 2px inset;
+		border-bottom: 2px solid white;
+		color: black;
+		padding: 4px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.nabh-bar  .active {
+border: 2px outset;
+		border-bottom: none
+		
+	}
+		.nabh-bar  .alws {
+			position:absolute;
+border: 2px solid transparent;
+			width:100%;
+		border-bottom: 2px solid white
+		
+	}
+	.nabh-bar a .active:hover {
+		background-color:#c0c0c0;
+	}
+	.nabh-bar a :hover {
+		background-color: lightgray;
+	}
+	.blueimg {
+		position: relative;
+		width: 100%;
+	}
+
+.buttonn {
+		border-left: 1px white;
+		border-top: 1px black;
+	background-color: #ffffff
+		
+	}
+	.button {
+		border-left: 1px white;
+		border-top: 1px black;
+		position: absolute;
+		right: 4;
+		top: 2px;
+		width: 16px;
+		height: 16px;
+	}
+
+	.heaad {
+		padding: 1;
+		padding-right: 1;
+		width: 100%;
+		top: 0;
+		position: absolute;
+		color: white;
+	}
+
+	.outerthing {
+
+		display: none;
+		
+		
+		justify-content: center;
+	z-index:1;
+	}
+.outerthing-phone {
+
+		display: none;
+		
+		height:100vh;
+		justify-content: center;
+	align-items:center;
+	}
+.outerthing-email ,.outerthing-aboutweb{
+
+		display: none;
+		height:100vh;
+		justify-content: center;
+	align-items:center;
+	}
+
+
+	.mainthing {
+    
+		padding: 1px;
+		z-index: 2;
+		border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+		background-color: #c0c0c0;
+		width: 60%;
+		height: 70%;
+		overflow: hidden;
+		position: absolute;
+	}
+
+.mainthing-phone {
+    align-items:center;
+	position:absolute;
+		padding: 1px;
+		z-index: 2;
+		border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+		background-color: #c0c0c0;
+		width: auto;
+	}
+
+.mainthing-aboutweb {
+    align-items:center;
+	position:absolute;
+		padding: 1px;
+		z-index: 2;
+		border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+		background-color: #c0c0c0;
+		width: 50%;
+	}
+.mainthing-email {
+    align-items:center;
+	position:absolute;
+		padding: 1px;
+		z-index: 2;
+		border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+		background-color: #c0c0c0;
+		width: auto;
+	}
+.outerthing-login {
+
+		display: flex;
+		
+		height:100vh;
+		justify-content: center;
+	align-items:center;
+	}
+.mainthing-login {
+	
+    align-items:center;
+		padding: 1px;
+		z-index: 2;
+		border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+		background-color: #c0c0c0;
+		width: auto;
+		position: fixed;
+	}
+
+
+
+.login{
+	padding:1px
+}
+#otp , #uname{
+	width:40%;
+	border:2px #A0A0A0	 inset
+}
+
+	.nabh-bar .als {
+		padding: 4px;
+		text-align: center;
+			position:relative;
+border: 2px solid transparent;
+		//	width:100%;
+right:4;
+		border-bottom: 2px solid white
+		
+	}
+.err{
+	color:red;
+}
+.submi, .regi{
+	width:20%;
+	
+	border-right: 2px black solid;
+		border-left: 2px white solid;
+		border-top: 2px white solid;
+		border-bottom: 2px black solid;
+}
+.submi:active,.regi:active,.button:active,.buttonn:active{
+	border:inset 2px
+}
+.submi:hover,.regi:hover,.button:hover{
+	background-color:white
+}
+
+#qr{
+	border-radius:5px;
+	width:35%;
+	padding:4px;
+	border:white solid 
+}
+
+#tskbar-btn{
+	 line-height: 2px;
+	display:none;
+	height: 30;
+}
+
+
+
+#winklik{
+	background-color:#c3c3c3;
+    position: relative;
+    bottom: -3px;
+	border:2px solid black;
+    border-top: white;
+    border-left: white;
+	
+}
+
+
+
+@media only screen and (max-height: 390px) {
+#win > table > tbody > tr:nth-child(7) > td { display:none }
+	#win > table > tbody > tr:nth-child(8) > td { display:none }
+
+	#win > table > tbody > tr:nth-child(9) > td { display:none }
+
+
+}
+
+@media only screen and (max-width: 760px) {
+
+	.mainthing { width:100%}
+
+	
+}
+.nabh-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nabh-bar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
