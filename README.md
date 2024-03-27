@@ -1,10 +1,4 @@
-Express.js Template
-This is a simple Express.js template that can be used as a starting point for creating web applications with Node.js and Express.
-
-Features
-Provides a basic Express.js setup with routing and middleware support.
-Uses EJS as the template engine.
-Includes a simple test suite using Mocha and Chai.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+Windows 98 themed showcase website
+Might take a minute or two for first load after a long time(DUE TO FREE HOSTING(render.com))
+MADE COMPLETELY OUT OF VANILLA JS
+only libraries I used are Express-Session for session storage and SpeakEasy for authenticator code generation.
